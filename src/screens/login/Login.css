@@ -1,0 +1,93 @@
+.login-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 242, 202, 0.40) 12.5%, rgba(255, 202, 241, 0.40) 25%, #ECCAFF 50%, rgba(255, 202, 241, 0.40) 75%, rgba(255, 242, 202, 0.40) 87.5%, rgba(255, 255, 255, 0.60) 100%), #FFF;
+    background-size: 400% 400%;
+    animation: gradientDesktop 25s ease infinite;
+
+    @media (max-width: 1000px) {
+        background: none;
+        animation: none;
+    }
+
+    .wt-container {
+        position: relative;
+    }
+}
+
+.login-section__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 242, 202, 0.40) 25%, rgba(255, 202, 241, 0.40) 50%, #ECCAFF 100%), #FFF;
+    background-size: cover;
+    animation: bgMoves 1.5s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+
+.login-section__buttons {
+    display: flex;
+}
+
+.login-section__button {
+    opacity: 0;
+    animation: buttonOpacity 1s ease-in-out 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.login-section__logo {
+    width: 72px;
+    height: 72px;
+}
+
+.login-section__qr {
+    width: 300px;
+    height: 300px;
+    border-radius: 32px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+@keyframes bgMoves {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -101vh;
+    }
+}
+
+@keyframes buttonOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes gradientDesktop {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    75% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+

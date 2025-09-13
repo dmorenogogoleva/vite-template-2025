@@ -1,0 +1,8 @@
+containerPort: 3000
+health:
+  path: /
+ingress:
+  enabled: false
+runAsUser: 101
+runAsGroup: 101
+
